@@ -376,7 +376,7 @@ void updateACDB(uint32_t new_rx_device, uint32_t new_tx_device,
 
 static status_t updateDeviceInfo(int rx_device,int tx_device,
                                  uint32_t rx_acdb_id, uint32_t tx_acdb_id) {
-    ALOGE("updateDeviceInfo: E rx_device %d and tx_device %d", rx_device, tx_device);
+    ALOGD("updateDeviceInfo: E rx_device %d and tx_device %d", rx_device, tx_device);
     bool isRxDeviceEnabled = false,isTxDeviceEnabled = false;
     Routing_table *temp_ptr,*temp_head;
     int tx_dev_prev = INVALID_DEVICE;
@@ -519,7 +519,7 @@ static status_t updateDeviceInfo(int rx_device,int tx_device,
         temp_head = temp_head->next;
     }
 
-    ALOGE("updateDeviceInfo: X cur_rx %d cur_tx %d", cur_rx, cur_tx);
+    ALOGD("updateDeviceInfo: X cur_rx %d cur_tx %d", cur_rx, cur_tx);
     return NO_ERROR;
 }
 
